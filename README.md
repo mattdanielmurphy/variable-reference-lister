@@ -1,3 +1,30 @@
-Want to make a tool to make it easier to split up a JavaScript file.
+# Variable Reference Lister
 
-It scans through and lists all the variables in the order in which they're written as headings, and lists their references as subheadings. Given for both the variables and their references are the line numbers on which they're found as well as the function to which they belong.
+A simple (early stages) command-line tool to ease the process of modularizing a large JavaScript file by listing the line numbers of every reference to each variable in the file.
+
+## How to Install
+
+`npm i variable-reference-lister`
+
+## How to Use
+
+`vrl <path to file>`
+
+### Example output:
+
+```
+{ albums: [ 1, 4, 4, 13, 23, 38, 42, 48 ],
+  spotifyApi: [ 20 ],
+  albumMatches: [ 36, 41, 42 ],
+  matchlessAlbums: [ 39, 63 ],
+  finishedIndexes: [ 22, 41, 42 ],
+  concurrentRequests: [ 18, 24, 50 ],
+  searchAlbums: [ 20, 63 ],
+  album: [ 13, 14, 23, 28, 34, 36, 38, 39, 41, 42, 42, 48 ],
+  query: [ 20 ],
+  matchResults: [ 23, 25, 26 ],
+  done: [ 57 ],
+  matches: [ 34, 34, 38 ],
+  matchInfo: [ 36 ],
+  tryToRequest: [ 53, 56 ] }
+```
